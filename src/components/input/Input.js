@@ -1,15 +1,49 @@
-import React from "react";
-import { Text, View, Image, StyleSheet, TextInput } from "react-native";
-const Input = ({ placeholder, type, secureTextEntry, image }) => {
+import React, { useState } from "react";
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+// import Entypo from "react-native-vector-icons/Entypo";
+// import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
+const Input = ({ placeholder, type, secureTextEntry, image, pass, margin }) => {
+  const [eye, setEye] = useState("false");
+  // const [hide, setHide] = useState("false");
+
   return (
-    <View style={styles.inputview}>
-      <Image source={image} style={styles.icon} />
-      <TextInput
-        style={styles.input}
-        placeholder={placeholder}
-        keyboardType={type}
-        secureTextEntry={secureTextEntry}
-      />
+    <View style={[styles.inputview, { marginTop: margin }]}>
+      <View
+        style={{
+          // backgroundColor: "pink",
+          flexDirection: "row",
+          alignItems: "center",
+        }}
+      >
+        <Image source={image} style={styles.icon} />
+        <TextInput
+          style={styles.input}
+          placeholder={placeholder}
+          keyboardType={type}
+          // secureTextEntry={secureTextEntry}
+          secureTextEntry={!eye}
+        />
+      </View>
+
+      <TouchableOpacity onPress={() => setEye(!eye)}>
+        {pass ? (
+          <View style={{ right: 4 }}>
+            {eye == false ? (
+              <Entypo name="eye-with-line" size={22} color={"#707070"} />
+            ) : (
+              <Entypo name="eye" size={22} color={"#707070"} />
+            )}
+          </View>
+        ) : null}
+      </TouchableOpacity>
     </View>
   );
 };
@@ -24,7 +58,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     elevation: 10,
     padding: 10,
-    marginTop: 35,
+    marginTop: 25,
+    position: "relative",
+    justifyContent: "space-between",
   },
   icon: {
     // width: 17,
@@ -32,7 +68,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   input: {
-    width: "100%",
+    width: "70%",
     fontSize: 12,
     color: "#707070",
     paddingLeft: 15,
@@ -40,3 +76,22 @@ const styles = StyleSheet.create({
 });
 
 export { Input };
+{
+  /* <View style={{ backgroundColor: "pink" }}></View> */
+}
+{
+  /* {pass ? <AntDesign name="eye" size={40} color={"pink"} /> : null} */
+}
+{
+  /* {pass
+      ?
+      <View style={{ backgroundColor: "red" }}>
+      {eye == false ?
+        <Entypo name="eye-with-line" size={22} color={"black"} />
+        :(
+        <Entypo name="eye" size={22} color={"black"} />
+      }
+    
+      </View>
+      :} */
+}

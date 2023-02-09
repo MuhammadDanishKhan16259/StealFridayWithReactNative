@@ -4,19 +4,32 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import Splash from "../screens/auth/splash/Splash";
 import Login from "../screens/auth/login/Login";
 import Splash from "../screens/auth/Splash/Splash";
+import Signup from "../screens/auth/signup/Signup";
+import Payment from "../screens/auth/payment/Payment";
 
 const Stack = createNativeStackNavigator();
 const Auth = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Splash"
         component={Splash}
         options={{ headerShown: false }}
-      />
+      /> */}
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Payment"
+        component={Payment}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
@@ -25,13 +38,24 @@ const Auth = () => {
 export const Homes = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Home1"
-        component={Login}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen />
     </Stack.Navigator>
   );
+  //   <Stack.Screen
+  //   name="Splash"
+  //   component={Splash}
+  //   options={{ headerShown: false }}
+  // />
+  // export const Homes = () => {
+  //   return (
+  //     <Stack.Navigator>
+  //       <Stack.Screen
+  //         name="Home1"
+  //         component={Login}
+  //         options={{ headerShown: false }}
+  //       />
+  //     </Stack.Navigator>
+  //   );
 };
 const MyStack = () => {
   return (

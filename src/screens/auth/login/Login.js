@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button, Input } from "../../../components";
 import Checkbox from "expo-checkbox";
-const Login = () => {
+const Login = ({ navigation }) => {
   const [isChecked, setChecked] = useState(false);
+
   const emailimage = require("../../../assets/images/emi.png");
   const lockimage = require("../../../assets/images/lock.png");
   return (
@@ -23,11 +24,14 @@ const Login = () => {
               image={emailimage}
               placeholder={"Email Address"}
               type={"email - address"}
+              margin={25}
             />
             <Input
               image={lockimage}
               placeholder={"password"}
               secureTextEntry={true}
+              pass={"true"}
+              margin={25}
             />
             <View style={styles.check}>
               <View style={{ flexDirection: "row" }}>
@@ -43,11 +47,19 @@ const Login = () => {
             </View>
           </View>
           <View style={styles.bottomview}>
-            <Button title={"Login"} />
+            <Button
+              title={"Login"}
+              size={22}
+              color={"white"}
+              back={"#a41716"}
+            />
             <Text style={styles.or}>OR</Text>
             <View style={styles.signup}>
               <Text style={{ fontSize: 12 }}>Don't have an account? </Text>
-              <Text style={{ color: "#CD1C1B", fontWeight: "600" }}>
+              <Text
+                onPress={() => navigation.navigate("Signup")}
+                style={{ color: "#CD1C1B", fontWeight: "600" }}
+              >
                 Sign Up
               </Text>
             </View>
@@ -95,11 +107,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "600%",
     opacity: 0.3,
-    marginTop: 20,
+    // marginTop: 20,
+    marginVertical: 10,
   },
   signup: {
     flexDirection: "row",
     alignSelf: "center",
+    // marginVertical: 10,
   },
   contact: {
     flexDirection: "row",

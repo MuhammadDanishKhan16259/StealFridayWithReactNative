@@ -7,11 +7,11 @@ import {
   Image,
 } from "react-native";
 const Splash = ({ navigation }) => {
-  useEffect(() => {
-    setInterval(() => {
-      navigation.navigate("Login");
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     navigation.navigate("Login");
+  //   }, 3000);
+  // }, []);
 
   return (
     <ImageBackground
