@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button, Input } from "../../../components";
 import Checkbox from "expo-checkbox";
+import Lottie from "lottie-react-native";
+
 const Login = ({ navigation }) => {
   const [isChecked, setChecked] = useState(false);
 
@@ -33,6 +35,7 @@ const Login = ({ navigation }) => {
               pass={"true"}
               margin={25}
             />
+
             <View style={styles.check}>
               <View style={{ flexDirection: "row" }}>
                 <Checkbox
@@ -48,11 +51,22 @@ const Login = ({ navigation }) => {
           </View>
           <View style={styles.bottomview}>
             <Button
+              press={() => navigation.navigate("Signup")}
+              width={"55%"}
+              height={55}
               title={"Login"}
               size={22}
               color={"white"}
               back={"#a41716"}
             />
+            {/* <Lottie
+              style={{
+                width: 50,
+                height: 50,
+              }}
+              autoPlay
+              source={require("../../../assets/lottie/lf30_editor_mlmghdi1.json")}
+            /> */}
             <Text style={styles.or}>OR</Text>
             <View style={styles.signup}>
               <Text style={{ fontSize: 12 }}>Don't have an account? </Text>

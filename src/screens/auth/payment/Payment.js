@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   View,
@@ -7,9 +7,11 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
-import { Input2 } from "../../../components";
+import { Input2, Modall } from "../../../components";
 import { Button } from "../../../components";
 const Payment = ({ navigation }) => {
+  const [visible, setVisible] = useState("false");
+  const [visible2, setVisible2] = useState("false");
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ width: "90%", alignSelf: "center" }}>
@@ -60,14 +62,35 @@ const Payment = ({ navigation }) => {
 
         <View style={styles.bottomview}>
           <Button
+            press={() => setVisible(true)}
             color={"white"}
             title={"Pay Now"}
+            width={"55%"}
+            height={55}
             back={"#a41716"}
             size={22}
+          />
+          <Modall
+            visible={visible}
+            svisible={() => setVisible(false)}
+            backbtn={() => setVisible(false)}
+            show={true}
+            text={"Are you sure, you want to proceed with payment?"}
+          />
+
+          <Modall
+            presss={() => {
+              setVisible2(true), setVisible(false);
+            }}
+            visible={visible2}
+            text={"Payment Processed Successfully"}
+            backbtn={() => setVisible2(false)}
           />
           <Text style={styles.or}>- OR -</Text>
           <Button
             back={"white"}
+            width={"55%"}
+            height={55}
             title={"Pay Pal"}
             color={"#a41716"}
             size={22}

@@ -22,7 +22,7 @@ const Input2 = ({ label, margin, width, type, pass }) => {
           >
             <Image
               source={require("../../assets/images/red.png")}
-              style={{ width: 20, height: 20, left: 10 }}
+              style={{ width: 20, height: 20, left: 10, zIndex: 1 }}
             />
             <Image
               source={require("../../assets/images/yellow.png")}

@@ -98,6 +98,8 @@ const Signup = ({ navigation }) => {
                   navigation.navigate("Payment");
                 }}
                 size={18}
+                width={"55%"}
+                height={55}
                 title={"Proceed to pay"}
                 color={"white"}
                 back={"#a41716"}
