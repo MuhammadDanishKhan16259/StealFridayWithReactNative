@@ -3,9 +3,9 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import Modal from "react-native-modal";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Lottie from "lottie-react-native";
-// import { Button } from "../button/Button";
+
 import { Button } from "../../components";
-// MaterialIcons error-outline
+
 const Modall = ({ visible, backbtn, svisible, show, text, presss }) => {
   return (
     <Modal
@@ -39,7 +39,7 @@ const Modall = ({ visible, backbtn, svisible, show, text, presss }) => {
         <Text style={{ fontSize: 18, textAlign: "center" }}>{text}</Text>
         <View style={styles.btn}>
           {show ? (
-            <>
+            <View style={{ flexDirection: "row", marginTop: 15 }}>
               <Button
                 press={svisible}
                 title={"No"}
@@ -51,17 +51,18 @@ const Modall = ({ visible, backbtn, svisible, show, text, presss }) => {
                 marginRight={10}
               />
               <Button
-                press={presss}
                 title={"Yes"}
+                press={presss}
                 color={"white"}
                 back={"#a41716"}
                 width={110}
                 height={45}
               />
-            </>
+            </View>
           ) : (
             <Button
-              press={presss}
+              // press={presss}
+              press={backbtn}
               title={"Close"}
               color={"white"}
               back={"#a41716"}

@@ -6,6 +6,7 @@ import Login from "../screens/auth/login/Login";
 import Splash from "../screens/auth/Splash/Splash";
 import Signup from "../screens/auth/signup/Signup";
 import Payment from "../screens/auth/payment/Payment";
+import Home from "../screens/homes/home/Home";
 
 const Stack = createNativeStackNavigator();
 const Auth = () => {
@@ -38,7 +39,11 @@ const Auth = () => {
 export const Homes = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
   //   <Stack.Screen

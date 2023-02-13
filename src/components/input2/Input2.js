@@ -8,14 +8,18 @@ import {
   StyleSheet,
   TextInput,
 } from "react-native";
-const Input2 = ({ label, margin, width, type, pass }) => {
+const Input2 = ({ label, margin, width, type, pass, placeholder }) => {
   return (
     <View style={[styles.input2view, { marginTop: margin, width: width }]}>
       <Text style={{ fontSize: 14, color: "#00000065", fontWeight: "bold" }}>
         {label}
       </Text>
       <View>
-        <TextInput keyboardType={type} style={styles.input2} />
+        <TextInput
+          keyboardType={type}
+          placeholder={placeholder}
+          style={styles.input2}
+        />
         {pass ? (
           <View
             style={{ flexDirection: "row", position: "absolute", right: 0 }}
@@ -38,7 +42,7 @@ const Input2 = ({ label, margin, width, type, pass }) => {
 const styles = StyleSheet.create({
   input2view: {
     alignSelf: "center",
-    width: "90%",
+    // width: "90%",
   },
   input2: {
     borderBottomColor: "black",
