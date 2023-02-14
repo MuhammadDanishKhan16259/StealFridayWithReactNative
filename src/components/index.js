@@ -3,3 +3,5 @@ export * from "./button/Button";
 export * from "./input2/Input2";
 export * from "./modal/Modal";
 export * from "./header/Header";
+export * from "./viewall/Viewall";
+export * from "./products/Product";
