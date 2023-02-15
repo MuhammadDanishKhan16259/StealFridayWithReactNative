@@ -1,16 +1,24 @@
 import React from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
-const Product = ({ product, marginTop }) => {
+const Product = ({ product, marginTop, hori, num, marginBottom }) => {
   return (
     <View style={{ marginTop: marginTop }}>
       <FlatList
         data={product}
         showsHorizontalScrollIndicator={false}
-        horizontal={true}
+        // horizontal={true}
+        horizontal={hori}
+        numColumns={num}
         renderItem={(items) => {
           return (
-            <View style={{ marginRight: 15 }}>
+            <View
+              style={{
+                marginRight: 15,
+                alignItems: "center",
+                marginBottom: marginBottom,
+              }}
+            >
               <View
                 style={[
                   styles.productback,
@@ -86,6 +94,16 @@ const Product = ({ product, marginTop }) => {
                   </View>
                 </View>
               </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  // fontWeight: "bold",
+                  // color: "red",
+                  marginTop: 10,
+                }}
+              >
+                {items.item.title}
+              </Text>
             </View>
           );
         }}
@@ -95,10 +113,10 @@ const Product = ({ product, marginTop }) => {
 };
 const styles = StyleSheet.create({
   productback: {
-    width: 160,
+    width: 155,
     height: 160,
     borderRadius: 30,
-    opacity: 0.5,
+    opacity: 8,
   },
   topitem: {
     marginTop: 10,
@@ -116,6 +134,22 @@ const styles = StyleSheet.create({
   },
 });
 export { Product };
+//my
+{
+  /* <View>
+<Text
+  style={{
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "red",
+    marginTop: 80,
+  
+  }}
+>
+  {items.item.title}
+</Text>
+</View> */
+}
 
 // import React from "react";
 // import { FlatList, Text, View, StyleSheet, Image } from "react-native";
@@ -151,8 +185,6 @@ export { Product };
 //                         height: 30,
 //                         width: 30,
 //                         borderRadius: 15,
-//                         backgroundColor: "transparent",
-
 //                         backgroundColor: "white",
 //                         opacity: 0.7,
 //                         alignItems: "center",
@@ -169,18 +201,20 @@ export { Product };
 //                 </View>
 //                 <View
 //                   style={{
+//                     margin: 2,
 //                     flexDirection: "row",
 //                     justifyContent: "space-around",
 //                     alignItems: "center",
+//                     alignSelf: "center",
 //                     // backgroundColor: "red",
-//                     width: "100%",
-//                     marginTop: 20,
+//                     width: "90%",
+//                     marginTop: 10,
 //                   }}
 //                 >
 //                   <View style={{ marginVertical: 30, marginTop: 30 }}>
 //                     <Text
 //                       style={{
-//                         fontSize: 20,
+//                         fontSize: 22,
 //                         fontWeight: "bold",
 //                         textAlign: "left",
 //                       }}
@@ -190,17 +224,17 @@ export { Product };
 //                   </View>
 //                   <View
 //                     style={{
-//                       //   width: 110,
-//                       //   height: 110,
-//                       paddingHorizontal: 10,
-//                       width: "100%",
+//                       width: 110,
+//                       height: 110,
+
+//                       // width: "100%",
 //                       justifyContent: "center",
 //                       alignItems: "center",
 //                       //   backgroundColor: "blue",
 //                     }}
 //                   >
 //                     <Image
-//                       style={{ width: "80%", height: "80%" }}
+//                       style={{ width: "80%", height: "80%", marginRight: 5 }}
 //                       resizeMode="contain"
 //                       source={items.item.image}
 //                     />

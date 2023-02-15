@@ -5,3 +5,4 @@ export * from "./modal/Modal";
 export * from "./header/Header";
 export * from "./viewall/Viewall";
 export * from "./products/Product";
+export * from "./products2/Products2";
