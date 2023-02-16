@@ -7,6 +7,8 @@ import Splash from "../screens/auth/Splash/Splash";
 import Signup from "../screens/auth/signup/Signup";
 import Payment from "../screens/auth/payment/Payment";
 import Home from "../screens/homes/home/Home";
+import Mydrawer from "./Mydrawer";
+// import Mydrawer from "./Mydrawer";
 
 const Stack = createNativeStackNavigator();
 const Auth = () => {
@@ -44,6 +46,11 @@ export const Homes = () => {
         component={Home}
         options={{ headerShown: false }}
       />
+      {/* <Stack.Screen
+        name="Mydrawer"
+        component={Mydrawer}
+        options={{ headerShown: false }}
+      /> */}
     </Stack.Navigator>
   );
   //   <Stack.Screen
@@ -65,8 +72,8 @@ export const Homes = () => {
 const MyStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Auth">
-        <Stack.Screen
+      <Stack.Navigator>
+        {/* <Stack.Screen
           name="Auth"
           component={Auth}
           options={{ headerShown: false }}
@@ -74,6 +81,11 @@ const MyStack = () => {
         <Stack.Screen
           name="Homes"
           component={Homes}
+          options={{ headerShown: false }}
+        /> */}
+        <Stack.Screen
+          name="Mydrawer"
+          component={Mydrawer}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

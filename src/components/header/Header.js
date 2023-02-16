@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
-const Header = ({ header1 }) => {
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
+// import { TouchableOpacity } from "react-native-gesture-handler";
+const Header = ({ header1, press }) => {
   return (
     <>
       {header1 && (
@@ -21,11 +22,14 @@ const Header = ({ header1 }) => {
                 // backgroundColor: "yellow",
               }}
             >
-              <Image
-                source={require("../../assets/images/menu.png")}
-                style={{ width: 45, height: 45 }}
-              />
+              <TouchableOpacity onPress={press}>
+                <Image
+                  source={require("../../assets/images/menu.png")}
+                  style={{ width: 45, height: 45 }}
+                />
+              </TouchableOpacity>
             </View>
+
             {/* <View style={{ alignItems: "center", backgroundColor: "green",width: }}> */}
             <View
               style={{

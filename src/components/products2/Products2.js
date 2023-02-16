@@ -98,7 +98,7 @@ const Products2 = ({ product }) => {
     />
   );
 };
-export default Products2;
+export { Products2 };
 const styles = StyleSheet.create({
   mainview: {
     width: 266,

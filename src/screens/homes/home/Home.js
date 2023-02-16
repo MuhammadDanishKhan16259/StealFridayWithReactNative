@@ -11,10 +11,10 @@ import {
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import CountDown from "react-native-countdown-component";
-import { Header, Product, Viewall } from "../../../components";
-import Products2 from "../../../components/products2/Products2";
+import { Header, Product, Viewall, Products2 } from "../../../components";
+// import Products2 from "../../../components/products2/Products2";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const product = [
     {
       tag: "Old",
@@ -154,7 +154,7 @@ const Home = () => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={{ width: "90%", alignSelf: "center" }}>
           {/* <Text style={{ color: "black" }}>hommmmmeeeeeeeeeeeeeeeeee</Text> */}
-          <Header header1={true} />
+          <Header press={() => navigation.openDrawer()} header1={true} />
           <View style={{ width: "100%" }}>
             <Image
               // source={require("../../assets/images/hide.png")}
@@ -168,86 +168,6 @@ const Home = () => {
               }}
             />
           </View>
-          {/* mine */}
-          {/* <LinearGradient
-            colors={["#650E0D", "#CA1C1A"]}
-            start={{ x: 0.1, y: 0.2 }}
-            end={{ x: 0.5, y: 1 }}
-            style={styles.timer}
-          >
-            <View
-              style={{
-                alignSelf: "center",
-                width: "90%",
-                flexDirection: "row",
-                justifyContent: "space-around",
-                alignItems: "center",
-              }}
-            >
-              <View style={{ alignItems: "center" }}>
-                <Text
-                  style={{ color: "white", fontSize: 28, fontWeight: "bold" }}
-                >
-                  00
-                </Text>
-                <Text style={{ color: "white", fontSize: 10, marginTop: -5 }}>
-                  Days
-                </Text>
-              </View>
-              <View
-                style={{
-                  borderLeftWidth: 1,
-                  height: 40,
-                  borderLeftColor: "#030303",
-                }}
-              ></View>
-              <View style={{ alignItems: "center" }}>
-                <Text
-                  style={{ color: "white", fontSize: 28, fontWeight: "bold" }}
-                >
-                  14
-                </Text>
-                <Text style={{ color: "white", fontSize: 10, marginTop: -5 }}>
-                  Hours
-                </Text>
-              </View>
-              <View
-                style={{
-                  borderLeftWidth: 1,
-                  height: 40,
-                  borderLeftColor: "#030303",
-                }}
-              ></View>
-              <View style={{ alignItems: "center" }}>
-                <Text
-                  style={{ color: "white", fontSize: 28, fontWeight: "bold" }}
-                >
-                  30
-                </Text>
-                <Text style={{ color: "white", fontSize: 10, marginTop: -5 }}>
-                  Minutes
-                </Text>
-              </View>
-              <View
-                style={{
-                  borderLeftWidth: 1,
-                  height: 40,
-                  borderLeftColor: "#030303",
-                }}
-              ></View>
-              <View style={{ alignItems: "center" }}>
-                <Text
-                  style={{ color: "white", fontSize: 28, fontWeight: "bold" }}
-                >
-                  09
-                </Text>
-                <Text style={{ color: "white", fontSize: 10, marginTop: -5 }}>
-                  Seconds
-                </Text>
-              </View>
-            </View>
-          </LinearGradient> */}
-          {/* maam */}
           <LinearGradient
             colors={["#650E0D", "#CA1C1A"]}
             start={{ x: 0.1, y: 0.2 }}
@@ -286,7 +206,12 @@ const Home = () => {
               digitTxtStyle={{ color: "white", fontSize: 28 }}
               timeLabelStyle={{ fontsize: 10, marginTop: -5 }}
               timeToShow={["D", "H", "M", "S"]}
-              timeLabels={{ d: "Days", h: "Hours", m: "Minutes", s: "Seconds" }}
+              timeLabels={{
+                d: "Days",
+                h: "Hours",
+                m: "Minutes",
+                s: "Seconds",
+              }}
             />
           </LinearGradient>
           {/* 
