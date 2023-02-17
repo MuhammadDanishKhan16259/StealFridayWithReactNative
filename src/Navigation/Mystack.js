@@ -8,6 +8,7 @@ import Signup from "../screens/auth/signup/Signup";
 import Payment from "../screens/auth/payment/Payment";
 import Home from "../screens/homes/home/Home";
 import Mydrawer from "./Mydrawer";
+import Profilesetting from "../screens/homes/home/profilesetting/Profilesetting";
 // import Mydrawer from "./Mydrawer";
 
 const Stack = createNativeStackNavigator();
@@ -46,6 +47,13 @@ export const Homes = () => {
         component={Home}
         options={{ headerShown: false }}
       />
+
+      <Stack.Screen
+        name="Profilesetting"
+        component={Profilesetting}
+        options={{ headerShown: false }}
+      />
+
       {/* <Stack.Screen
         name="Mydrawer"
         component={Mydrawer}
@@ -73,12 +81,12 @@ const MyStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Auth"
           component={Auth}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Homes"
           component={Homes}
           options={{ headerShown: false }}

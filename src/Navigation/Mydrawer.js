@@ -5,6 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { FlatList, Text } from "react-native";
 import Customdrawer from "../components/customdrawer/Customdrawer";
 import Home from "../screens/homes/home/Home";
+import { Homes } from "./Mystack";
 const Homee = () => {
   return <Text>heelo</Text>;
 };
@@ -21,8 +22,8 @@ const Mydrawer = () => {
       drawerContent={(props) => <Customdrawer {...props} />}
     >
       <Drawer.Screen
-        name="Home"
-        component={Home}
+        name="Homes"
+        component={Homes}
         options={{ headerShown: false }}
       />
       {/* <Drawer.Screen name="About" component={About} /> */}

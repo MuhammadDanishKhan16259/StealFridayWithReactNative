@@ -6,3 +6,4 @@ export * from "./header/Header";
 export * from "./viewall/Viewall";
 export * from "./products/Product";
 export * from "./products2/Products2";
+export * from "./settingtext/Settingtext";

@@ -12,6 +12,7 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import CountDown from "react-native-countdown-component";
 import { Header, Product, Viewall, Products2 } from "../../../components";
+// import { useNavigation } from '@react-navigation/native';
 // import Products2 from "../../../components/products2/Products2";
 
 const Home = ({ navigation }) => {
@@ -154,7 +155,11 @@ const Home = ({ navigation }) => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={{ width: "90%", alignSelf: "center" }}>
           {/* <Text style={{ color: "black" }}>hommmmmeeeeeeeeeeeeeeeeee</Text> */}
-          <Header press={() => navigation.openDrawer()} header1={true} />
+          <Header
+            press2={() => navigation.navigate("Profilesetting")}
+            press={() => navigation.openDrawer()}
+            header1={true}
+          />
           <View style={{ width: "100%" }}>
             <Image
               // source={require("../../assets/images/hide.png")}
@@ -207,7 +212,7 @@ const Home = ({ navigation }) => {
               timeLabelStyle={{ fontsize: 10, marginTop: -5 }}
               timeToShow={["D", "H", "M", "S"]}
               timeLabels={{
-                d: "Days",
+                d: "Daysss",
                 h: "Hours",
                 m: "Minutes",
                 s: "Seconds",

@@ -103,7 +103,7 @@ const Payment = ({ navigation }) => {
             />
             <Text style={styles.or}>- OR -</Text>
             <Button
-              press={() => navigation.navigate("Homes", { screen: "Home" })}
+              press={() => navigation.navigate("Mydrawer", { screen: "Homes" })}
               back={"white"}
               width={"55%"}
               height={55}
