@@ -9,6 +9,12 @@ import Payment from "../screens/auth/payment/Payment";
 import Home from "../screens/homes/home/Home";
 import Mydrawer from "./Mydrawer";
 import Profilesetting from "../screens/homes/home/profilesetting/Profilesetting";
+import Profile from "../screens/homes/home/profilesetting/Profile";
+import Notifications from "../screens/homes/home/profilesetting/Notifications";
+import Changepassword from "../screens/homes/home/profilesetting/Changepassword";
+import Termscondition from "../screens/homes/home/profilesetting/termscondition/Termscondition";
+import PrivacyPolicy from "../screens/homes/home/profilesetting/privacypolicy/PrivacyPolicy";
+// import Profiles from "../screens/homes/home/profile/Profiles";
 // import Mydrawer from "./Mydrawer";
 
 const Stack = createNativeStackNavigator();
@@ -47,13 +53,43 @@ export const Homes = () => {
         component={Home}
         options={{ headerShown: false }}
       />
-
       <Stack.Screen
         name="Profilesetting"
         component={Profilesetting}
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Changepassword"
+        component={Changepassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Termscondition"
+        component={Termscondition}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="PrivacyPolicy"
+        component={PrivacyPolicy}
+        options={{ headerShown: false }}
+      />
+      {/* <Stack.Screen
+        name="profiles"
+        component={Profiles}
+        options={{ headerShown: false }}
+      /> */}
 
+      {/* Profile */}
       {/* <Stack.Screen
         name="Mydrawer"
         component={Mydrawer}

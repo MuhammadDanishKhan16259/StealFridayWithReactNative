@@ -7,3 +7,4 @@ export * from "./viewall/Viewall";
 export * from "./products/Product";
 export * from "./products2/Products2";
 export * from "./settingtext/Settingtext";
+export * from "./input3/Input3";

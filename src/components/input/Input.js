@@ -10,15 +10,20 @@ import {
 // import Entypo from "react-native-vector-icons/Entypo";
 // import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
-const Input = ({ placeholder, type, secureTextEntry, image, pass, margin }) => {
+const Input = ({
+  placeholder,
+  type,
+  secureTextEntry,
+  image,
+  pass,
+  margin,
+  width,
+}) => {
   const [eye, setEye] = useState("false");
-  // const [hide, setHide] = useState("false");
-
   return (
     <View style={[styles.inputview, { marginTop: margin }]}>
       <View
         style={{
-          // backgroundColor: "pink",
           flexDirection: "row",
           alignItems: "center",
         }}

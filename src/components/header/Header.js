@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Images } from "../../constant/image";
 // import { TouchableOpacity } from "react-native-gesture-handler";
 const Header = ({ header1, press, press2, header2, press3 }) => {
   return (
@@ -41,6 +42,7 @@ const Header = ({ header1, press, press2, header2, press3 }) => {
               }}
             >
               <Image
+                // source={Images.backgroundimage.background1}
                 source={require("../../assets/images/Logo2.png")}
                 style={{ width: 120, height: 30 }}
               />
