@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Images } from "../../constant/image";
 // import { TouchableOpacity } from "react-native-gesture-handler";
-const Header = ({ header1, press, press2, header2, press3 }) => {
+const Header = ({ header1, press, press2, header2, press3, press4 }) => {
   return (
     <>
       {header1 && (
@@ -66,10 +66,12 @@ const Header = ({ header1, press, press2, header2, press3 }) => {
                 backgroundColor: "blue",
               }}
             > */}
-              <Image
-                source={require("../../assets/images/notif.png")}
-                style={{ width: 16, height: 24, marginRight: 10 }}
-              />
+              <TouchableOpacity onPress={press4}>
+                <Image
+                  source={require("../../assets/images/notif.png")}
+                  style={{ width: 16, height: 24, marginRight: 10 }}
+                />
+              </TouchableOpacity>
               <TouchableOpacity onPress={press2}>
                 <Image
                   source={require("../../assets/images/profile.png")}

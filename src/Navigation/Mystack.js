@@ -23,6 +23,7 @@ import Termscondition from "../screens/profileoption/termscondition/Termsconditi
 import Myprofile from "../screens/profileoption/myprofile/MyProfile";
 import Notification from "../screens/profileoption/notification/Notification";
 import Privacypolicy from "../screens/profileoption/privacypolicy/Privacypolicy";
+import Notificationsetting from "../screens/notificationsetting/Notificationsetting";
 // import Profiles from "../screens/homes/home/profile/Profiles";
 // import Mydrawer from "./Mydrawer";
 
@@ -49,6 +50,11 @@ const Auth = () => {
       <Stack.Screen
         name="Payment"
         component={Payment}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Notificationsetting"
+        component={Notificationsetting}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

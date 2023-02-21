@@ -21,7 +21,7 @@ const Profilesetting = ({ navigation }) => {
             />
             <Settingoption
               title={"Notificatons"}
-              press={() => navigation.navigate("Notification")}
+              press={() => navigation.navigate("Notificationsetting")}
             />
             <Settingoption
               title={"Change Password"}

@@ -68,6 +68,8 @@ const Login = ({ navigation }) => {
               source={require("../../../assets/lottie/lf30_editor_mlmghdi1.json")}
             /> */}
             <Text style={styles.or}>OR</Text>
+            {/* Svgicon1 */}
+
             <View style={styles.signup}>
               <Text style={{ fontSize: 12 }}>Don't have an account? </Text>
               <Text

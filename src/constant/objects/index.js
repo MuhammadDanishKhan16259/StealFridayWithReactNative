@@ -248,6 +248,45 @@ export const privacy = [
       "A cookie is a small amount of information that’s downloaded to your computer or device when you visit our Site. We use a number of different cookies, including functional, performance, advertising, and social media or content cookies. Cookies make your browsing experience better by allowing the website to remember your actions and preferences (such as login and region selection). This means you don’t have to re-enter this information each time you return to the site or browse from one page to another. Cookies also provide information on how people use the website, for instance whether it’s their first time visiting or if they are a frequent visitor. We use the following cookies to optimize your experience on our Site and to provide our services. Cookies Necessary for the Functioning of the Store The length of time that a cookie remains on your computer or mobile device depends on whether it is a “persistent” or “session” cookie. Session cookies last until you stop browsing and persistent cookies last until they expire or are deleted. Most of the cookies we use are persistent and will expire between 30 minutes and two years from the date they are downloaded to your device. You can control and manage cookies in various ways. Please keep in mind that removing or blocking cookies can negatively impact your user experience and parts of our website may no longer be fully accessible. Most browsers automatically accept cookies, but you can choose whether or not to accept cookies through your browser controls, often found in your browser’s “Tools” or “Preferences” menu. For more information on how to modify your browser settings or how to block, manage or filter cookies can be found in your browser’s help file or through such sites as www.allaboutcookies.org. Additionally, please note that blocking cookies may not completely prevent how we share information with third parties such as our advertising partners. To exercise your rights or opt-out of certain uses of your information by these parties, please follow the instructions in the “Behavioural Advertising” section above. ",
   },
 ];
+export const newnoti = [
+  {
+    image: require("../../assets/images/shoes4.png"),
+    title: "New Nike Shoe Added",
+    time: "Yesterday - 10:00 Pm",
+  },
+  {
+    image: require("../../assets/images/headphone3.png"),
+    title: "New NHeadphone Added",
+    time: "Yesterday - 11:00 Pm",
+  },
+  {
+    image: require("../../assets/images/tshirt4.png"),
+    title: "New T-Shirt Added",
+    time: "Yesterday - 10:00 Pm",
+  },
+];
+export const oldnoti = [
+  {
+    image: require("../../assets/images/shoes5.png"),
+    title: "New Nike Shoe Added",
+    time: "Yesterday - 10:00 Pm",
+  },
+  {
+    image: require("../../assets/images/shoes6.png"),
+    title: "New Nike Shoe Added",
+    time: "Yesterday - 10:00 Pm",
+  },
+  {
+    image: require("../../assets/images/headphone4.png"),
+    title: "New NHeadphone Added",
+    time: "Yesterday - 11:00 Pm",
+  },
+  {
+    image: require("../../assets/images/tshirt5.png"),
+    title: "New T-Shirt Added",
+    time: "Yesterday - 10:00 Pm",
+  },
+];
 
 // export const term = [
 //   {
