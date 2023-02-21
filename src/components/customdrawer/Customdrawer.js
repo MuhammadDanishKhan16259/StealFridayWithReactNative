@@ -16,22 +16,23 @@ const Customdrawer = ({ navigation }) => {
     },
     {
       title: "Settings",
-      image: require("../../assets/images/setting.png"),
+      image: require("../../assets/images/user2.png"),
     },
     {
       title: "Subcription",
-      image: require("../../assets/images/subscription.png"),
+      // image: require("../../assets/images/subs.png"),
+      image: require("../../assets/images/subs.png"),
     },
     {
-      title: "Favorite",
-      image: require("../../assets/images/favourite.png"),
+      title: "Favorites",
+      image: require("../../assets/images/favo.png"),
     },
     {
       title: "Cart",
       image: require("../../assets/images/cart.png"),
     },
     {
-      title: "My orders",
+      title: "My Orders",
       image: require("../../assets/images/order.png"),
     },
     {
@@ -45,13 +46,13 @@ const Customdrawer = ({ navigation }) => {
   ];
   return (
     <ImageBackground
-      source={require("../../assets/images/drawer.png")}
+      source={require("../../assets/images/drawe3.png")}
       style={{ height: "100%", width: "100%" }}
       resizeMode={"stretch"}
     >
       <View style={{ width: "75%", alignSelf: "center", marginTop: 70 }}>
         <Image
-          source={require("../../assets/images/Logo.png")}
+          source={require("../../assets/images/logo.png")}
           style={{ width: 180, height: 30 }}
         />
         <View style={{ marginTop: 90 }}>

@@ -8,15 +8,15 @@ import Lottie from "lottie-react-native";
 const Login = ({ navigation }) => {
   const [isChecked, setChecked] = useState(false);
 
-  const emailimage = require("../../../assets/images/emi.png");
-  const lockimage = require("../../../assets/images/lock.png");
+  const emailimage = require("../../../assets/images/emailicon.png");
+  const lockimage = require("../../../assets/images/lockicon.png");
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#F8F8F8" }}>
       <ScrollView>
         <View style={{ width: "90%", alignSelf: "center" }}>
           <View style={styles.topView}>
             <Image
-              source={require("../../../assets/images/Logo2.png")}
+              source={require("../../../assets/images/logo2.png")}
               style={styles.logoimage}
             />
             <Text style={styles.logotext}>Login</Text>

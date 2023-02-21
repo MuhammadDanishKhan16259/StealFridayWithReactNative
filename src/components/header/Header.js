@@ -43,7 +43,7 @@ const Header = ({ header1, press, press2, header2, press3 }) => {
             >
               <Image
                 // source={Images.backgroundimage.background1}
-                source={require("../../assets/images/Logo2.png")}
+                source={require("../../assets/images/logo2.png")}
                 style={{ width: 120, height: 30 }}
               />
               <Text style={{ fontSize: 12, fontWeight: "bold" }}>By</Text>
@@ -67,7 +67,7 @@ const Header = ({ header1, press, press2, header2, press3 }) => {
               }}
             > */}
               <Image
-                source={require("../../assets/images/notify.png")}
+                source={require("../../assets/images/notif.png")}
                 style={{ width: 16, height: 24, marginRight: 10 }}
               />
               <TouchableOpacity onPress={press2}>
@@ -119,7 +119,7 @@ const Header = ({ header1, press, press2, header2, press3 }) => {
           >
             <TouchableOpacity onPress={press3}>
               <Image
-                source={require("../../assets/images/arrow.png")}
+                source={require("../../assets/images/leftarrow.png")}
                 style={{
                   height: 24,
                   width: 24,
@@ -133,7 +133,7 @@ const Header = ({ header1, press, press2, header2, press3 }) => {
           </View>
           {/* <View style={{ alignItems: "center", width: "90%" }}> */}
           <Image
-            source={require("../../assets/images/Logo2.png")}
+            source={require("../../assets/images/logo2.png")}
             style={{
               width: 140,
               height: 35,

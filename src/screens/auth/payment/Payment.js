@@ -22,7 +22,7 @@ const Payment = ({ navigation }) => {
             style={{ width: 0 }}
           >
             <Image
-              source={require("../../../assets/images/arrow.png")}
+              source={require("../../../assets/images/leftarrow.png")}
               style={{
                 width: 24,
                 height: 24,

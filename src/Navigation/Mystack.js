@@ -8,12 +8,21 @@ import Signup from "../screens/auth/signup/Signup";
 import Payment from "../screens/auth/payment/Payment";
 import Home from "../screens/homes/home/Home";
 import Mydrawer from "./Mydrawer";
-import Profilesetting from "../screens/homes/home/profilesetting/Profilesetting";
-import Profile from "../screens/homes/home/profilesetting/Profile";
-import Notifications from "../screens/homes/home/profilesetting/Notifications";
-import Changepassword from "../screens/homes/home/profilesetting/Changepassword";
-import Termscondition from "../screens/homes/home/profilesetting/termscondition/Termscondition";
-import PrivacyPolicy from "../screens/homes/home/profilesetting/privacypolicy/PrivacyPolicy";
+// import Profilesetting from "../screens/homes/home/profilesetting/Profilesetting";
+// import Profile from "../screens/homes/home/profilesetting/Profile";
+// import Notifications from "../screens/homes/home/profilesetting/Notifications";
+// import Changepassword from "../screens/homes/home/profilesetting/Changepassword";
+// import Termscondition from "../screens/homes/home/profilesetting/termscondition/Termscondition";
+// import PrivacyPolicy from "../screens/homes/home/profilesetting/privacypolicy/PrivacyPolicy";
+import Profilesetting from "../screens/profileoption/profilesetting/Profilesetting";
+// import Profile from "../screens/profileoption/myprofile/MyProfile";
+// import Notification from "../screens/profileoption/notification/Notifications";
+import Changepassword from "../screens/profileoption/changepassword/Changepassword";
+import Termscondition from "../screens/profileoption/termscondition/Termscondition";
+// import Privacypolicy from "../screens/profileoption/privacypolicy/PrivacyPolicy";
+import Myprofile from "../screens/profileoption/myprofile/MyProfile";
+import Notification from "../screens/profileoption/notification/Notification";
+import Privacypolicy from "../screens/profileoption/privacypolicy/Privacypolicy";
 // import Profiles from "../screens/homes/home/profile/Profiles";
 // import Mydrawer from "./Mydrawer";
 
@@ -59,13 +68,13 @@ export const Homes = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Profile"
-        component={Profile}
+        name="Myprofile"
+        component={Myprofile}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Notifications"
-        component={Notifications}
+        name="Notification"
+        component={Notification}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -79,8 +88,8 @@ export const Homes = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="PrivacyPolicy"
-        component={PrivacyPolicy}
+        name="Privacypolicy"
+        component={Privacypolicy}
         options={{ headerShown: false }}
       />
       {/* <Stack.Screen
