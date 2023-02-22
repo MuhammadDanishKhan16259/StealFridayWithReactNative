@@ -17,6 +17,7 @@ const Customdrawer = ({ navigation }) => {
     {
       title: "Settings",
       image: require("../../assets/images/user2.png"),
+      Change: "Profilesetting",
     },
     {
       title: "Subcription",
@@ -61,7 +62,11 @@ const Customdrawer = ({ navigation }) => {
             renderItem={(item) => {
               // onPress={() => navigation.closeDrawer()}
               return (
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate(item.item.Change);
+                  }}
+                >
                   <View style={{ flexDirection: "row", marginBottom: 23 }}>
                     <Image
                       source={item.item.image}

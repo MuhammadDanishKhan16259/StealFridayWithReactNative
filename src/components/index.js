@@ -10,3 +10,5 @@ export * from "./settingoption/Settingoption";
 export * from "./input3/Input3";
 export * from "./notificationbtn/Notificationtbn";
 export * from "./notificationmsg/Notificationmsg";
+export * from "./sizes/Sizes";
+export * from "./button2/Button2";

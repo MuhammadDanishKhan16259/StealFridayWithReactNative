@@ -24,6 +24,8 @@ import Myprofile from "../screens/profileoption/myprofile/MyProfile";
 import Notification from "../screens/profileoption/notification/Notification";
 import Privacypolicy from "../screens/profileoption/privacypolicy/Privacypolicy";
 import Notificationsetting from "../screens/notificationsetting/Notificationsetting";
+import Addtocart from "../screens/products/addtocart/Addtocart";
+// import Addtocart from "../screens/products/addtocart/Addtocart";
 // import Profiles from "../screens/homes/home/profile/Profiles";
 // import Mydrawer from "./Mydrawer";
 
@@ -63,6 +65,11 @@ const Auth = () => {
 export const Homes = () => {
   return (
     <Stack.Navigator>
+      {/* <Stack.Screen
+        name="Addtocart"
+        component={Addtocart}
+        options={{ headerShown: false }}
+      /> */}
       <Stack.Screen
         name="Home"
         component={Home}
@@ -132,6 +139,11 @@ const MyStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        {/* <Stack.Screen
+          name="Mydrawer"
+          component={Mydrawer}
+          options={{ headerShown: false }}
+        /> */}
         <Stack.Screen
           name="Auth"
           component={Auth}

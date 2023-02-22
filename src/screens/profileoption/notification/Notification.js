@@ -120,7 +120,14 @@
 
 // export default Notification;
 import React from "react";
-import { View, SafeAreaView, ScrollView, Text, FlatList } from "react-native";
+import {
+  View,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import { Header, Notificationmsg } from "../../../components";
 import { newnoti, oldnoti } from "../../../constant/objects";
 
@@ -198,6 +205,20 @@ const Notification = ({ navigation }) => {
               )}
             />
           </View>
+          <TouchableOpacity>
+            <Text
+              style={{
+                textAlign: "center",
+                paddingBottom: 15,
+                marginTop: 10,
+                fontSize: 16,
+                fontWeight: "bold",
+                color: "#1564EB",
+              }}
+            >
+              View More..
+            </Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

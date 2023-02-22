@@ -4,6 +4,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Button, Input } from "../../../components";
 import Checkbox from "expo-checkbox";
 import Lottie from "lottie-react-native";
+import Svgicon1 from "../../../assets/svg/icons/homesvg";
+import Images from "../../../constant/image";
+import Colors from "../../../constant/colors";
+// import Assets from "../../../constant/image";
+// import Assets from "../../../constant/image";
+// import Assets from "../../../constant/image";
 
 const Login = ({ navigation }) => {
   const [isChecked, setChecked] = useState(false);
@@ -11,14 +17,16 @@ const Login = ({ navigation }) => {
   const emailimage = require("../../../assets/images/emailicon.png");
   const lockimage = require("../../../assets/images/lockicon.png");
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#F8F8F8" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.backgroundColor }}>
       <ScrollView>
         <View style={{ width: "90%", alignSelf: "center" }}>
           <View style={styles.topView}>
-            <Image
+            {/* <Image
               source={require("../../../assets/images/logo2.png")}
               style={styles.logoimage}
-            />
+            /> */}
+            {/* Assets Backgroundimage image1 */}
+            <Image source={Images.background.back1} style={styles.logoimage} />
             <Text style={styles.logotext}>Login</Text>
           </View>
           <View style={styles.middleView}>
@@ -69,6 +77,7 @@ const Login = ({ navigation }) => {
             /> */}
             <Text style={styles.or}>OR</Text>
             {/* Svgicon1 */}
+            {/* <Svgicon1 /> */}
 
             <View style={styles.signup}>
               <Text style={{ fontSize: 12 }}>Don't have an account? </Text>
