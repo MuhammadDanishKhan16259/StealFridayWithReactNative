@@ -11,7 +11,7 @@ export const product = [
   },
   {
     tag: "Old",
-    price: "$15.00",
+    price: "$12.00",
     // image: require("../../assests/images/shoes1.png"),
     image: require("../../assets/images/shoes1.png"),
     title: "Nike Collection",
@@ -20,7 +20,7 @@ export const product = [
   },
   {
     tag: "New",
-    price: "$15.00",
+    price: "$10.00",
     image: require("../../assets/images/headphone1.png"),
     title: "Beats Up HeadSet",
     backcolor: "#114C8A",
@@ -28,7 +28,7 @@ export const product = [
   },
   {
     tag: "New",
-    price: "$15.00",
+    price: "$18.00",
     image: require("../../assets/images/shoes2.png"),
     title: "Nike Collection",
     backcolor: "#CDF37B",

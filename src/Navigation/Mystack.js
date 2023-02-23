@@ -65,11 +65,6 @@ const Auth = () => {
 export const Homes = () => {
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen
-        name="Addtocart"
-        component={Addtocart}
-        options={{ headerShown: false }}
-      /> */}
       <Stack.Screen
         name="Home"
         component={Home}
@@ -103,6 +98,11 @@ export const Homes = () => {
       <Stack.Screen
         name="Privacypolicy"
         component={Privacypolicy}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Addtocart"
+        component={Addtocart}
         options={{ headerShown: false }}
       />
       {/* <Stack.Screen

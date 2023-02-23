@@ -61,8 +61,15 @@ const Home = ({ navigation }) => {
             marginTop={20}
             left={0}
           />
-
-          <Product hori={true} product={product} marginTop={40} />
+          {/* press={() => {
+              navigation.navigate("Addtocart");
+            }} */}
+          <Product
+            hori={true}
+            product={product}
+            marginTop={40}
+            press={navigation}
+          />
 
           <Viewall
             viewAllBtn

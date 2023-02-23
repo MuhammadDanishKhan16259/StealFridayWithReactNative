@@ -12,6 +12,7 @@ const Customdrawer = ({ navigation }) => {
     {
       title: "Home",
       image: require("../../assets/images/home.png"),
+      Change: "Home",
       //   close: "closeDrawer()",
     },
     {

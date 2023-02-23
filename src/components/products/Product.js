@@ -1,7 +1,14 @@
 import React from "react";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
-const Product = ({ product, marginTop, hori, num, marginBottom }) => {
+const Product = ({ product, marginTop, hori, num, marginBottom, press }) => {
   return (
     <View style={{ marginTop: marginTop }}>
       <FlatList
@@ -12,99 +19,111 @@ const Product = ({ product, marginTop, hori, num, marginBottom }) => {
         numColumns={num}
         renderItem={(items) => {
           return (
-            <View
-              style={{
-                marginRight: 15,
-                alignItems: "center",
-                marginBottom: marginBottom,
-              }}
+            <TouchableOpacity
+              onPress={() =>
+                press.navigate("Addtocart", {
+                  image: items.item.image,
+                  productname: items.item.title,
+                  price: items.item.price,
+                  tag: items.item.tag,
+                })
+              }
             >
               <View
-                style={[
-                  styles.productback,
-                  { backgroundColor: items.item.backcolor },
-                ]}
+                style={{
+                  marginRight: 15,
+                  alignItems: "center",
+                  marginBottom: marginBottom,
+                }}
               >
-                <View style={{ width: "80%", alignSelf: "center" }}>
-                  <View style={styles.topitem}>
-                    <View
-                      style={[
-                        styles.tag,
-                        { backgroundColor: items.item.backcolor },
-                      ]}
-                    >
-                      <Text>{items.item.tag}</Text>
+                <View
+                  style={[
+                    styles.productback,
+                    { backgroundColor: items.item.backcolor },
+                  ]}
+                >
+                  <View style={{ width: "80%", alignSelf: "center" }}>
+                    <View style={styles.topitem}>
+                      <View
+                        style={[
+                          styles.tag,
+                          { backgroundColor: items.item.backcolor },
+                        ]}
+                      >
+                        <Text>{items.item.tag}</Text>
+                      </View>
+                      <View
+                        style={{
+                          height: 30,
+                          width: 30,
+                          borderRadius: 15,
+                          backgroundColor: "white",
+                          opacity: 0.7,
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <AntDesign
+                          name="star"
+                          color={items.item.iconcolor}
+                          size={22}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                  {/* <TouchableOpacity onPress={press}> */}
+                  <View
+                    style={{
+                      // margin: 2,
+                      // paddingHorizontal:10,
+                      width: "90%",
+                      alignSelf: "center",
+                      flexDirection: "row",
+                      marginTop: 10,
+                      // justifyContent:'space-around',
+                      // alignItems: "center",
+                      // justifyContent: "center",
+                    }}
+                  >
+                    <View style={{ marginVertical: 30, marginTop: 40 }}>
+                      <Text
+                        style={{
+                          fontSize: 22,
+                          fontWeight: "bold",
+                          textAlign: "left",
+                        }}
+                      >
+                        {items.item.price}
+                      </Text>
                     </View>
                     <View
                       style={{
-                        height: 30,
-                        width: 30,
-                        borderRadius: 15,
-                        backgroundColor: "white",
-                        opacity: 0.7,
-                        alignItems: "center",
+                        width: 110,
+                        height: 110,
                         justifyContent: "center",
+                        alignItems: "center",
                       }}
                     >
-                      <AntDesign
-                        name="star"
-                        color={items.item.iconcolor}
-                        size={22}
+                      <Image
+                        style={{ width: "80%", height: "80%", marginRight: 20 }}
+                        resizeMode="contain"
+                        source={items.item.image}
                       />
                     </View>
                   </View>
                 </View>
-                <View
+                <Text
                   style={{
-                    // margin: 2,
-                    // paddingHorizontal:10,
-                    width: "90%",
-                    alignSelf: "center",
-                    flexDirection: "row",
+                    fontSize: 16,
+                    // fontWeight: "bold",
+                    // color: "red",
                     marginTop: 10,
-                    // justifyContent:'space-around',
-                    // alignItems: "center",
-                    // justifyContent: "center",
                   }}
                 >
-                  <View style={{ marginVertical: 30, marginTop: 40 }}>
-                    <Text
-                      style={{
-                        fontSize: 22,
-                        fontWeight: "bold",
-                        textAlign: "left",
-                      }}
-                    >
-                      {items.item.price}
-                    </Text>
-                  </View>
-                  <View
-                    style={{
-                      width: 110,
-                      height: 110,
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Image
-                      style={{ width: "80%", height: "80%", marginRight: 20 }}
-                      resizeMode="contain"
-                      source={items.item.image}
-                    />
-                  </View>
-                </View>
+                  {items.item.title}
+                </Text>
               </View>
-              <Text
-                style={{
-                  fontSize: 16,
-                  // fontWeight: "bold",
-                  // color: "red",
-                  marginTop: 10,
-                }}
-              >
-                {items.item.title}
-              </Text>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />
