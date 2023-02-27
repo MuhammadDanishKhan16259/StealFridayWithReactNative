@@ -1,54 +1,8 @@
-// import React from "react";
-// import { Text, View } from "react-native";
-// import AntDesign from "@expo/vector-icons/AntDesign";
-// const Viewall = ({ title, viewall, marginTop }) => {
-//   return (
-//     <View
-//       style={{
-//         flexDirection: "row",
-//         alignItems: "center",
-//         width: "100%",
-//         justifyContent: "space-between",
-//         marginTop: marginTop,
-//       }}
-//     >
-//       <View
-//         style={{
-//           justifyContent: "flex-start",
-//         }}
-//       >
-//         <Text style={{ fontSize: 16, fontWeight: "bold" }}>{title}</Text>
-//       </View>
-
-//       <View
-//         style={{ width: "45%", justifyContent: "center", alignItems: "center" }}
-//       >
-//         <View style={{ borderBottomWidth: 1, height: 1, width: "95%" }}></View>
-//       </View>
-//       <View
-//         style={{
-//           // width: "20%",
-//           alignItems: "center",
-//           flexDirection: "row",
-//           justifyContent: "flex-end",
-//         }}
-//       >
-//         <Text style={{ fontSize: 14, fontWeight: "bold", color: "#CD1C1B" }}>
-//           {viewall}
-//         </Text>
-//         <AntDesign name="arrowright" size={17} color={"#CD1C1B"} />
-//         {/* <View></View>
-//       <View></View> */}
-//       </View>
-//     </View>
-//   );
-// };
-// export { Viewall };
-
 // maam code
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import { useNavigation } from "@react-navigation/native";
 const Viewall = ({
   text,
   text2,
@@ -59,9 +13,10 @@ const Viewall = ({
   lineColor,
   viewAllBtn,
   backgroundColor,
-  Press,
+  press,
   marginTop,
 }) => {
+  const navigation = useNavigation();
   return (
     <>
       <View
@@ -113,7 +68,11 @@ const Viewall = ({
           </View>
           {viewAllBtn && (
             <TouchableOpacity
-              onPress={Press}
+              onPress={() =>
+                navigation.navigate("Products", {
+                  screen: press,
+                })
+              }
               style={{
                 position: "absolute",
                 top: -13,
@@ -135,6 +94,7 @@ const Viewall = ({
                   fontWeight: fontWeight || "bold",
                 }}
               >
+                {/* {"ViewAll"} */}
                 {text2}
               </Text>
               {/* <Icon

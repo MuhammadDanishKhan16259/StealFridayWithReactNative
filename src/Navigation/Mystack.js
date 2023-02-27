@@ -15,19 +15,18 @@ import Mydrawer from "./Mydrawer";
 // import Termscondition from "../screens/homes/home/profilesetting/termscondition/Termscondition";
 // import PrivacyPolicy from "../screens/homes/home/profilesetting/privacypolicy/PrivacyPolicy";
 import Profilesetting from "../screens/profileoption/profilesetting/Profilesetting";
-// import Profile from "../screens/profileoption/myprofile/MyProfile";
-// import Notification from "../screens/profileoption/notification/Notifications";
+
 import Changepassword from "../screens/profileoption/changepassword/Changepassword";
 import Termscondition from "../screens/profileoption/termscondition/Termscondition";
-// import Privacypolicy from "../screens/profileoption/privacypolicy/PrivacyPolicy";
+
 import Myprofile from "../screens/profileoption/myprofile/MyProfile";
 import Notification from "../screens/profileoption/notification/Notification";
 import Privacypolicy from "../screens/profileoption/privacypolicy/Privacypolicy";
 import Notificationsetting from "../screens/notificationsetting/Notificationsetting";
 import Addtocart from "../screens/products/addtocart/Addtocart";
+import Featureddeals from "../screens/products/featureddeals/Featureddeals";
 // import Addtocart from "../screens/products/addtocart/Addtocart";
-// import Profiles from "../screens/homes/home/profile/Profiles";
-// import Mydrawer from "./Mydrawer";
+// import Featureddeals from "../screens/products/featureddeals/Featureddeals";
 
 const Stack = createNativeStackNavigator();
 const Auth = () => {
@@ -100,11 +99,30 @@ export const Homes = () => {
         component={Privacypolicy}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Addtocart"
         component={Addtocart}
         options={{ headerShown: false }}
       />
+
+      <Stack.Screen
+        name="Featureddeals"
+        component={Featureddeals}
+        options={{ headerShown: false }}
+      /> */}
+
+      {/* <Stack.Screen
+        name="Featureddeals"
+        component={Featureddeals}
+        options={{ headerShown: false }}
+      /> */}
+
+      {/* <Stack.Screen
+        name="FeaturedDeals"
+        component={FeaturedDeals}
+        options={{ headerShown: false }}
+      /> */}
+
       {/* <Stack.Screen
         name="profiles"
         component={Profiles}
@@ -135,6 +153,24 @@ export const Homes = () => {
   //     </Stack.Navigator>
   //   );
 };
+
+export const Products = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Addtocart"
+        component={Addtocart}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="Featureddeals"
+        component={Featureddeals}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
 const MyStack = () => {
   return (
     <NavigationContainer>
@@ -157,6 +193,11 @@ const MyStack = () => {
         <Stack.Screen
           name="Mydrawer"
           component={Mydrawer}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Products"
+          component={Products}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

@@ -21,11 +21,14 @@ const Product = ({ product, marginTop, hori, num, marginBottom, press }) => {
           return (
             <TouchableOpacity
               onPress={() =>
-                press.navigate("Addtocart", {
-                  image: items.item.image,
-                  productname: items.item.title,
-                  price: items.item.price,
-                  tag: items.item.tag,
+                press.navigate("Products", {
+                  screen: "Addtocart",
+                  params: {
+                    image: items.item.image,
+                    productname: items.item.title,
+                    price: items.item.price,
+                    tag: items.item.tag,
+                  },
                 })
               }
             >

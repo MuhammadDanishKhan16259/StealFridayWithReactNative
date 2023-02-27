@@ -58,6 +58,7 @@ const Home = ({ navigation }) => {
             viewAllBtn
             text="Featured Deals"
             text2={"View All"}
+            press={"Featureddeals"}
             marginTop={20}
             left={0}
           />
@@ -77,6 +78,7 @@ const Home = ({ navigation }) => {
             text2={"View All"}
             left={0}
             marginTop={30}
+            // Press={"Login"}
           />
 
           <View style={{ marginTop: 20 }}>
@@ -96,7 +98,7 @@ const Home = ({ navigation }) => {
             num={2}
             product={product3}
             marginbottom={15}
-            marginTop={40}
+            marginTop={20}
           />
           <TouchableOpacity>
             <Text
