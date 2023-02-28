@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   SafeAreaView,
@@ -6,14 +6,16 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { Header, Product } from "../../../components";
+import { Header, Modall2, Product } from "../../../components";
 import { product3 } from "../../../constant/objects";
 const Featureddeals = ({ navigation }) => {
+  const [visible, setVisible] = useState(false);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#F8F8F8" }}>
       <ScrollView>
         <View style={{ width: "90%", alignSelf: "center" }}>
           <Header
+            filteropen={() => setVisible(true)}
             filter={true}
             press3={() => navigation.goBack()}
             header2={true}
@@ -32,6 +34,9 @@ const Featureddeals = ({ navigation }) => {
             marginbottom={15}
             marginTop={40}
           />
+        </View>
+        <View>
+          <Modall2 visible={visible} backbtn={() => setVisible(false)} />
         </View>
         <TouchableOpacity>
           <Text

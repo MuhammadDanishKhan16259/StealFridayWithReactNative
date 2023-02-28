@@ -25,6 +25,7 @@ import Privacypolicy from "../screens/profileoption/privacypolicy/Privacypolicy"
 import Notificationsetting from "../screens/notificationsetting/Notificationsetting";
 import Addtocart from "../screens/products/addtocart/Addtocart";
 import Featureddeals from "../screens/products/featureddeals/Featureddeals";
+import Activedeals from "../screens/products/activedeals/Activedeals";
 // import Addtocart from "../screens/products/addtocart/Addtocart";
 // import Featureddeals from "../screens/products/featureddeals/Featureddeals";
 
@@ -166,6 +167,11 @@ export const Products = () => {
       <Stack.Screen
         name="Featureddeals"
         component={Featureddeals}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Activedeals"
+        component={Activedeals}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

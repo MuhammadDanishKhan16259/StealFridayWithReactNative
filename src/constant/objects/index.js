@@ -287,6 +287,158 @@ export const oldnoti = [
     time: "Yesterday - 10:00 Pm",
   },
 ];
+export const clothing = [
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/tshirt1.png"),
+    title: "Gym T-shirt",
+    backcolor: "#00000029",
+    iconcolor: "#00000029",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/tshirt6.png"),
+    title: "Gym T-shirt",
+    backcolor: "#998BC8AD",
+    iconcolor: "#453B62",
+  },
+  {
+    tag: "New",
+    price: "$15.00",
+    image: require("../../assets/images/tshirt7.png"),
+    title: "Gym T-shirt",
+    backcolor: "#114C8A",
+    iconcolor: "#114C8A",
+  },
+  {
+    tag: "New",
+    price: "$15.00",
+    image: require("../../assets/images/tshirt8.png"),
+    title: "Gym T-shirt",
+    backcolor: "#BFFB41",
+    iconcolor: "#CDF37B",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/tshirt9.png"),
+    title: "Gym T-shirt",
+    backcolor: "#AF0010",
+    iconcolor: "#FF0000",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/tshirt2.png"),
+    title: "Gym T-shirt",
+    backcolor: "#00000029",
+    iconcolor: "#00000029",
+  },
+];
+
+export const shoes = [
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/shoes7.png"),
+    title: "Nike",
+    backcolor: "#00000029",
+    iconcolor: "#00000029",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/shoes1.png"),
+    title: "Gym T-shirt",
+    backcolor: "#998BC8AD",
+    iconcolor: "#453B62",
+  },
+  {
+    tag: "New",
+    price: "$15.00",
+    image: require("../../assets/images/shoes8.png"),
+    title: "Gym T-shirt",
+    backcolor: "#114C8A",
+    iconcolor: "#114C8A",
+  },
+  {
+    tag: "New",
+    price: "$15.00",
+    image: require("../../assets/images/shoes2.png"),
+    title: "Gym T-shirt",
+    backcolor: "#BFFB41",
+    iconcolor: "#CDF37B",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/shoes7.png"),
+    title: "Gym T-shirt",
+    backcolor: "#AF0010",
+    iconcolor: "#FF0000",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/shoes7.png"),
+    title: "Gym T-shirt",
+    backcolor: "#00000029",
+    iconcolor: "#00000029",
+  },
+];
+
+export const accessories = [
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/headphone5.png"),
+    title: "Nike",
+    backcolor: "#00000029",
+    iconcolor: "#00000029",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/headphone5.png"),
+    title: "Gym T-shirt",
+    backcolor: "#998BC8AD",
+    iconcolor: "#453B62",
+  },
+  {
+    tag: "New",
+    price: "$15.00",
+    image: require("../../assets/images/headphone2.png"),
+    title: "Gym T-shirt",
+    backcolor: "#114C8A",
+    iconcolor: "#114C8A",
+  },
+  {
+    tag: "New",
+    price: "$15.00",
+    image: require("../../assets/images/headphone6.png"),
+    title: "Gym T-shirt",
+    backcolor: "#BFFB41",
+    iconcolor: "#CDF37B",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/headphone7.png"),
+    title: "Gym T-shirt",
+    backcolor: "#AF0010",
+    iconcolor: "#FF0000",
+  },
+  {
+    tag: "Old",
+    price: "$15.00",
+    image: require("../../assets/images/apple.png"),
+    title: "Gym T-shirt",
+    backcolor: "#00000029",
+    iconcolor: "#00000029",
+  },
+];
 
 // export const term = [
 //   {

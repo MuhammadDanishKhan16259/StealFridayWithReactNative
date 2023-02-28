@@ -121,6 +121,7 @@ const Product = ({ product, marginTop, hori, num, marginBottom, press }) => {
                     // fontWeight: "bold",
                     // color: "red",
                     marginTop: 10,
+                    marginBottom: 10,
                   }}
                 >
                   {items.item.title}

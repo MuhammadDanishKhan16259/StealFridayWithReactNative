@@ -74,8 +74,9 @@ const Home = ({ navigation }) => {
 
           <Viewall
             viewAllBtn
-            text="Deal Categories"
+            text="Deal Categoriess"
             text2={"View All"}
+            press={"Activedeals"}
             left={0}
             marginTop={30}
             // Press={"Login"}
@@ -86,6 +87,7 @@ const Home = ({ navigation }) => {
           </View>
 
           <Viewall
+            press={"Activedeals"}
             viewAllBtn
             text="Active Deals"
             text2={"View All"}
@@ -94,6 +96,7 @@ const Home = ({ navigation }) => {
           />
 
           <Product
+            press={navigation}
             hori={false}
             num={2}
             product={product3}

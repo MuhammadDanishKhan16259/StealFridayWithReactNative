@@ -11,6 +11,7 @@ const Header = ({
   width,
   press4,
   filter,
+  filteropen,
 }) => {
   return (
     <>
@@ -100,26 +101,31 @@ const Header = ({
             style={{ width: width ? width : 140, height: height ? height : 35 }}
           />
           {filter ? (
-            <LinearGradient
-              colors={["#650E0D", "#CA1C1A"]}
-              start={{ x: 0.1, y: 0.2 }}
-              end={{ x: 0.8, y: 1 }}
-              style={{
-                width: 55,
-                height: 55,
-                borderRadius: 30,
-                alignItems: "center",
-                justifyContent: "center",
-                position: "absolute",
-                right: 0,
-                top: 10,
-              }}
+            <TouchableOpacity
+              onPress={filteropen}
+              style={{ position: "absolute", right: 0, top: 10 }}
             >
-              <Image
-                source={require("../../assets/images/filter.png")}
-                style={{ width: 14, height: 12 }}
-              />
-            </LinearGradient>
+              <LinearGradient
+                colors={["#650E0D", "#CA1C1A"]}
+                start={{ x: 0.1, y: 0.2 }}
+                end={{ x: 0.8, y: 1 }}
+                style={{
+                  width: 55,
+                  height: 55,
+                  borderRadius: 30,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "absolute",
+                  right: 0,
+                  top: 10,
+                }}
+              >
+                <Image
+                  source={require("../../assets/images/filter.png")}
+                  style={{ width: 14, height: 12 }}
+                />
+              </LinearGradient>
+            </TouchableOpacity>
           ) : null}
         </View>
       )}
