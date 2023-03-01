@@ -54,45 +54,65 @@
 // })
 // export  {Products2}
 import React from "react";
-import { View, Text, FlatList, StyleSheet, Image } from "react-native";
-const Products2 = ({ product }) => {
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+const Products2 = ({ product, press }) => {
   return (
     <FlatList
+      initialScrollIndex={1}
       style={{ borderRadius: 30, width: "100%" }}
       horizontal={true}
       data={product}
       showsHorizontalScrollIndicator={false}
       renderItem={(item) => {
         return (
-          <View style={styles.mainview}>
-            {/* <Text>react native components</Text> */}
+          <TouchableOpacity
+            style={styles.mainview}
+            onPress={() =>
+              press.navigate("Products", {
+                screen: "Categories",
+                params: {
+                  name: item.item.title,
+                },
+              })
+            }
+          >
+            <View>
+              {/* <Text>react native components</Text> */}
 
-            <View
-              style={{
-                // position: "relative",
-                // top: -30,
-                marginTop: -10,
-                width: 196,
-                height: 250,
-              }}
-            >
-              <Image
+              <View
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  overflow: "visible",
-                  resizeMode: "cover",
+                  // position: "relative",
+                  // top: -30,
+                  marginTop: -10,
+                  width: 196,
+                  height: 250,
                 }}
-                source={item.item.image}
-              />
+              >
+                <Image
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    overflow: "visible",
+                    resizeMode: "cover",
+                  }}
+                  source={item.item.image}
+                />
+              </View>
+              <View style={{ alignItems: "center" }}>
+                <Text style={{ fontSize: 16, fontWeight: "bold" }}>
+                  {item.item.title}
+                </Text>
+                <Text style={{ fontSize: 14 }}> {item.item.total}</Text>
+              </View>
             </View>
-            <View style={{ alignItems: "center" }}>
-              <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-                {item.item.title}
-              </Text>
-              <Text style={{ fontSize: 14 }}> {item.item.total}</Text>
-            </View>
-          </View>
+          </TouchableOpacity>
         );
       }}
     />

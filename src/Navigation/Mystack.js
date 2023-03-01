@@ -26,6 +26,7 @@ import Notificationsetting from "../screens/notificationsetting/Notificationsett
 import Addtocart from "../screens/products/addtocart/Addtocart";
 import Featureddeals from "../screens/products/featureddeals/Featureddeals";
 import Activedeals from "../screens/products/activedeals/Activedeals";
+import Categories from "../screens/products/categories/Categories";
 // import Addtocart from "../screens/products/addtocart/Addtocart";
 // import Featureddeals from "../screens/products/featureddeals/Featureddeals";
 
@@ -172,6 +173,11 @@ export const Products = () => {
       <Stack.Screen
         name="Activedeals"
         component={Activedeals}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Categories"
+        component={Categories}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

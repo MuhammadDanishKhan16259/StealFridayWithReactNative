@@ -12,6 +12,7 @@ const Header = ({
   press4,
   filter,
   filteropen,
+  one,
 }) => {
   return (
     <>
@@ -121,7 +122,11 @@ const Header = ({
                 }}
               >
                 <Image
-                  source={require("../../assets/images/filter.png")}
+                  source={
+                    one
+                      ? require("../../assets/images/filter2.png")
+                      : require("../../assets/images/filter.png")
+                  }
                   style={{ width: 14, height: 12 }}
                 />
               </LinearGradient>

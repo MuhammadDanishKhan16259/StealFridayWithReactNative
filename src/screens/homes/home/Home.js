@@ -74,7 +74,7 @@ const Home = ({ navigation }) => {
 
           <Viewall
             viewAllBtn
-            text="Deal Categoriess"
+            text="Deal Categories"
             text2={"View All"}
             press={"Activedeals"}
             left={0}
@@ -83,7 +83,7 @@ const Home = ({ navigation }) => {
           />
 
           <View style={{ marginTop: 20 }}>
-            <Products2 product={product2} />
+            <Products2 product={product2} press={navigation} />
           </View>
 
           <Viewall
