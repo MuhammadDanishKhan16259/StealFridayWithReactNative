@@ -148,7 +148,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "600%",
     opacity: 0.3,
-    // marginTop: 20,
     marginVertical: 10,
   },
   bottomview: {
